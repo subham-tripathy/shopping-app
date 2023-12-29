@@ -1,3 +1,4 @@
+import Footer from './Components/Footer'
 import NavBar from './Components/NavBar'
 import './globals.css'
 
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <nav className='fixed z-10 left-0 right-0 top-0'><NavBar/></nav>
         {children}
+        <footer><Footer/></footer>
       </body>
     </html>
   )
