@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -25,11 +25,20 @@ import WomenFootwear from '../pics/TodayDeal/WomenFootwear.webp'
 
 
 const TodayDeal = () => {
+const [SlidesPerView, setSlidesPerView] = useState(5);
+useEffect(()=>{
+    if(window.screen.width <= 640){
+        setSlidesPerView(1);
+    }
+    if(window.screen.width > 640 && window.screen.width <= 1024){
+        setSlidesPerView(3);
+    }
+});
   return (
     <div className='bg-cyan-200 border-t border-blue-400 pt-5 pb-14 shadow-lg shadow-slate-500'>
         <h1 className='text-3xl font-bold m-5'>Deal Of The Day</h1>
       <Swiper
-        slidesPerView={5}
+        slidesPerView={SlidesPerView}
         pagination={{
           clickable: true,
         }}
@@ -42,7 +51,7 @@ const TodayDeal = () => {
                         <Image src={BrandedFootwearAndClothings} className='h-44 w-auto'/>
                     </div>
                     <span className='flex justify-between text-md font-semibold text-red-500'>
-                        <h3 className='text-white bg-red-500 px-2 rounded'>Upto 33% off</h3>
+                        <h3 className='text-white bg-red-500 px-1 rounded'>Upto 33% off</h3>
                         <h3 className=''>Deal of the Day</h3>
                     </span>
                     <p className='text-sm font-semibold truncate'>Branded Footwear and Clothings</p>

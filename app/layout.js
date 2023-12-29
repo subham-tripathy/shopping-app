@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className='pt-28'>
         <nav className='fixed z-10 left-0 right-0 top-0'><NavBar/></nav>
         {children}
         <footer><Footer/></footer>

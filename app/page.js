@@ -6,7 +6,7 @@ import Footer from './Components/Footer'
 
 const page = () => {
   return (
-    <main className='mt-16'>
+    <main>
       <Carousel/>
       <AllCategory/>
       <TodayDeal/>

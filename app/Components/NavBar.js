@@ -42,7 +42,7 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 
         {/* FOR DESKTOPS */}
-        <div className='text-xl hidden lg:block lg:space-x-7'>
+        <div className='text-xl hidden lg:block xl:space-x-7'>
             <Link href={'/login'} className='px-4 py-2 rounded-xl hover:bg-cyan-300'>Login</Link>
             <Link href={'/cart'} className='px-4 py-2 rounded-xl hover:bg-cyan-300'>Cart</Link>
             <Link href={'/'} className='px-4 py-2 rounded-xl hover:bg-cyan-300'>Become a Seller</Link>

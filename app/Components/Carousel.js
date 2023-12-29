@@ -18,7 +18,7 @@ import Link from 'next/link';
 
 const Carousel = () => {
   return (
-    <div className='pt-7'>
+    <div>
 
     <div className='hidden md:block'>
       <Swiper 
